@@ -1,0 +1,26 @@
+[Unit]
+Description=Decentralway's distributed currency daemon
+After=network.target
+
+[Service]
+User=decentralway
+Group=decentralway
+
+Type=forking
+PIDFile=/var/lib/decentralwayd/decentralwayd.pid
+
+ExecStart=/usr/bin/decentralwayd -daemon -pid=/var/lib/decentralwayd/decentralwayd.pid \
+          -conf=/etc/decentralway/decentralway.conf -datadir=/var/lib/decentralwayd
+
+ExecStop=-/usr/bin/decentralway-cli -conf=/etc/decentralway/decentralway.conf \
+         -datadir=/var/lib/decentralwayd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

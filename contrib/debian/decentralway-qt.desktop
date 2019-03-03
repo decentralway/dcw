@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Decentralway
+Comment=Decentralway P2P Cryptocurrency
+Comment[fr]=Decentralway, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Decentralway, eşten eşe kriptografik sanal para birimi
+Exec=decentralway-qt %u
+Terminal=false
+Type=Application
+Icon=decentralway128
+MimeType=x-scheme-handler/decentralway;
+Categories=Office;Finance;

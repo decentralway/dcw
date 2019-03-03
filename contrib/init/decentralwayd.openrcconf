@@ -1,0 +1,26 @@
+# /etc/conf.d/decentralwayd: config file for /etc/init.d/decentralwayd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/decentralway/decentralway.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/decentralwayd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/decentralwayd.pid"
+
+# Where to write decentralwayd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/decentralwayd"
+
+# User and group to own decentralwayd process
+#BITCOIND_USER="decentralway"
+#BITCOIND_GROUP="decentralway"
+
+# Path to decentralwayd executable
+#BITCOIND_BIN="/usr/bin/decentralwayd"
+
+# Nice value to run decentralwayd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
